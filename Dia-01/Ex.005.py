@@ -7,14 +7,13 @@ Média de idade.
 Nome da pessoa mais velha.
 Nome da pessoa mais nova.'''
 cadastro = []
-soma = cont = 0
+soma = 0
 
 while True:
     pessoa = []
     pessoa.append(input('Digite o nome: ').capitalize().strip())
     pessoa.append(int(input('Digite a idade: ')))
     cadastro.append(pessoa)
-    cont += 1
     soma += pessoa[1]
 
     while True:
@@ -26,18 +25,18 @@ while True:
     if continuar == 'N':
         break
 
+media = soma / len(cadastro)
+mais_velha = pessoa
+mais_nova = pessoa    
+
 for pessoa in cadastro:
-    mais_velha = pessoa
     if pessoa[1] > mais_velha[1]:
         mais_velha = pessoa
-    mais_nova = pessoa
+
     if pessoa[1] < mais_nova[1]:
         mais_nova = pessoa
         
-
-media = soma / len(cadastro)
-
-print(f'\nTem {cont} pessoas Cadastradas\n')
+print(f'\nTem {len(cadastro)} pessoas Cadastradas\n')
 print('-'*5, 'LISTA PESSOAS CADASTRADAS', '-'*5)
 for indice, (pes, idade) in enumerate(cadastro):
     print(f'{pes} - {idade} anos')
