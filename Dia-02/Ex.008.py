@@ -22,4 +22,6 @@ for i in range(10):
 
 print(f'A lista de números: {numeros}')
 print(f'Tem um total de {len(par)} números pares. Sendo eles: {par}')
+print(f'A soma dos pares: {sum(par)}')
 print(f'Tem um total de {len(impar)} números ímpares. Sendo eles: {impar}')
+print(f'A soma dos impares: {sum(impar)}')
